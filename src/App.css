@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: gray;
+  height: 80px;
+}
+
+input[type="text"],
+textarea {
+  width: calc(50% - 100px);
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 8px 8px 0px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.todos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todos h2 {
+  flex-basis: 100%;
+  margin-top: 40px;
+}
+
+.todo {
+  flex-basis: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.todo h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.todo p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.todo button {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .todo {
+    flex-basis: 100%;
+  }
+}
