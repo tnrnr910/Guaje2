@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { connect } from "react-redux";
 import { addTodo, toggleTodoStatus, deleteTodo } from "./actions/todoActions";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import todoReducer from "./reducers/todoReducer";
 
 const App = ({ todos, addTodo, toggleTodoStatus, deleteTodo }) => {
@@ -112,15 +112,3 @@ const App = ({ todos, addTodo, toggleTodoStatus, deleteTodo }) => {
     </div>
   );
 };
-
-const mapStateToProps = (state) => ({
-  todos: state.todos,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  addTodo: (todo) => dispatch(addTodo(todo)),
-  toggleTodoStatus: (id) => dispatch(toggleTodoStatus(id)),
-  deleteTodo: (id) => dispatch(deleteTodo(id)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
